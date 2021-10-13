@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "mocha test/**.test.js",
     "build": "echo \"Error: no build process\" && exit 0",
-    "start": "node index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,13 @@
   },
   "homepage": "https://github.com/Naoroy/books#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^6.0.10"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.2",
+    "nodemon": "^2.0.13"
   }
 }
