@@ -12,7 +12,7 @@ db.on('error', console.error.bind(console, 'connection error:'))
 
 app.use(express.json())
 app.get('/', (req, res) => {
-    res.json({ message: 'Hello Express!' })
+    res.json({ message: 'Hey Continuous Deployment!' })
   })
   .route('/book')
     .get(book.getBooks)
