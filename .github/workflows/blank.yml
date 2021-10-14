@@ -17,31 +17,27 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   setup-db:
-  
+
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: debug
-        run: echo  ${ls}
+
       - name: MongoDB in GitHub Actions
         uses: supercharge/mongodb-github-action@1.6.0
-      
-      - name: Import test DB
-        run: mongorestore -db=bookshelf db/bookshelf
-        
+
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    
+
     # Define node versions to test the project on
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x, 15.x]
-  
+
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
       - name: Setup Node.js environments
         uses: actions/setup-node@v2.4.1
         with:

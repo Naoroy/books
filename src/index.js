@@ -4,17 +4,7 @@ const mongoose  = require('mongoose')
 const app       = express()
 const PORT      = process.env.PORT || 8080
 const book      = require('./components/bookshelf')
-const config    = require('../config')
 
-/*
-const dbOptions = {
-  server:   { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
-  replset:  { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }
-}
-*/
-
-//db connection
-//mongoose.connect(config.DB_URI)
 mongoose.connect('mongodb://localhost:27017/books')
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
