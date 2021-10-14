@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit --timeout 8000 \"test/**.test.js\"",
-    "build": "echo \"Error: no build process\" && exit 0",
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "test":   "mocha --exit --timeout 8000 \"test/**.test.js\"",
+    "build":  "echo \"Error: no build process\" && exit 0",
+    "dev":    "nodemon src/index.js",
+    "start":  "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   "homepage": "https://github.com/Naoroy/books#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.0.10"
+    "mongoose": "^6.0.10",
+    "pm2": "^5.1.2"
   },
   "devDependencies": {
     "chai": "^4.3.4",
