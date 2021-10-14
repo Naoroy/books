@@ -14,21 +14,15 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  setup:
-    runs-on: ubuntu-latest
-    steps:
-      - name: MongoDB in GitHub Actions
-        uses: supercharge/mongodb-github-action@1.6.0
-
   build:
-    needs: setup
     runs-on: ubuntu-latest
-    # Define node versions to test the project on
     strategy:
       matrix:
         node-version: [12.x, 14.x, 15.x]
     steps:
+      - name: MongoDB in GitHub Actions
+        uses: supercharge/mongodb-github-action@1.6.0
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Setup Node.js environments
