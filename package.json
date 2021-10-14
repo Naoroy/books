@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 8000 \"test/**.test.js\"",
+    "test": "mocha --exit --timeout 8000 \"test/**.test.js\"",
     "build": "echo \"Error: no build process\" && exit 0",
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
