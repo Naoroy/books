@@ -25,7 +25,7 @@ jobs:
         uses: supercharge/mongodb-github-action@1.6.0
       
       - name: Import test DB
-        run: mongorestore -db=bookshelf ./bookshelf
+        run: mongorestore -db=bookshelf db/bookshelf
         
   build:
     # The type of runner that the job will run on
